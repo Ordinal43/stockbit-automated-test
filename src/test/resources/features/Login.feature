@@ -10,7 +10,7 @@ Feature: Login
     When User input username "bryanr26"
     When User input password "password123"
     When User click login button
-    Then User is on Stockbit home page
+    Then User is on Stockbit dashboard page
 
   @Negative @RegisteredUser @WrongPassword
   Scenario: Login with registered user and wrong password
