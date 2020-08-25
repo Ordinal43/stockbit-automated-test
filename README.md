@@ -1,1 +1,3 @@
 stockbit-automated-test
+
+README in progress...
