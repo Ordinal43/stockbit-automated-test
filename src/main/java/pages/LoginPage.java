@@ -2,8 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import webdriver.WebDriverInstance;
 
 public class LoginPage {
@@ -26,5 +24,15 @@ public class LoginPage {
         WebElement btnLogin = WebDriverInstance.webDriver
                 .findElement(element);
         btnLogin.click();
+    }
+
+    public String getMessage() {
+        try {
+            By element = By.xpath("//div[contains(@class, 'sysmsg alert-top')]");
+            return WebDriverInstance.webDriver.findElement(element).getText();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "";
+        }
     }
 }

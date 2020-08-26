@@ -52,6 +52,7 @@ public class LoginSteps {
     }
 
     @Then("User gets error with the message {string}")
-    public void userGetsErrorWithTheMessage(String mesage) {
+    public void userGetsErrorWithTheMessage(String message) {
+        Assert.assertEquals(message, loginPage.getMessage());
     }
 }
