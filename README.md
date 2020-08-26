@@ -23,5 +23,5 @@
 ![Run CucumberRunner using player Screenshot](https://i.ibb.co/MMG2dyT/image.png)
 
 ## Notes ⚠️
-- When changing ChromeDriver versions, make sure it is the same version as the current Google Chrome version you have.
+- When changing ChromeDriver versions, make sure it is the same version as the current Google Chrome version you have. You can download the appropriate versions [HERE](https://chromedriver.chromium.org/downloads).
 - Make sure to delete the '.exe' extension from the ChromeDriver file name in order for the automation to run.
