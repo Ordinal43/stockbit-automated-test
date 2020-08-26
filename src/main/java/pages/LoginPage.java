@@ -4,10 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import webdriver.WebDriverInstance;
 
+import java.util.Set;
+
 public class LoginPage {
     String xpathInputUsername = "//input[@id='username']";
     String xpathInputPassword = "//input[@id='password']";
     String xpathBtnLogin = "//input[@id='loginbutton']";
+
+    String parentWindow = WebDriverInstance.webDriver.getWindowHandle();
 
     public void inputUsername(String username) {
         By element = By.xpath(xpathInputUsername);
@@ -23,7 +27,7 @@ public class LoginPage {
         inputPhoneNumber.sendKeys(password);
     }
 
-    public void clickButtonLogin() {
+    public void clickLoginButton() {
         By element = By.xpath(xpathBtnLogin);
         WebElement btnLogin = WebDriverInstance.webDriver
                 .findElement(element);
@@ -53,5 +57,50 @@ public class LoginPage {
     public boolean isBtnLoginDisplayed() {
         By by = By.xpath(xpathBtnLogin);
         return WebDriverInstance.webDriver.findElement(by).isDisplayed();
+    }
+
+    public void clickLoginWithGoogleButton() {
+        By element = By.xpath("//input[contains(@class, 'login-goog')]");
+        WebElement btnLogin = WebDriverInstance.webDriver
+                .findElement(element);
+        btnLogin.click();
+    }
+
+    public void clickLoginWithFacebookButton() {
+        By element = By.xpath("//a[contains(@class, 'login-fb')]");
+        WebElement btnLogin = WebDriverInstance.webDriver
+                .findElement(element);
+        btnLogin.click();
+    }
+
+    public void switchToNewlyOpenedWindow() {
+        Set<String> windows = WebDriverInstance.webDriver.getWindowHandles();
+        for (String window : windows)
+            WebDriverInstance.webDriver.switchTo().window(window);
+    }
+
+    public void inputFacebookEmail(String email) {
+        By element = By.xpath("//input[@id='email']");
+        WebElement inputPhoneNumber = WebDriverInstance.webDriver
+                .findElement(element);
+        inputPhoneNumber.sendKeys(email);
+    }
+
+    public void inputFacebookPassword(String password) {
+        By element = By.xpath("//input[@id='pass']");
+        WebElement inputPhoneNumber = WebDriverInstance.webDriver
+                .findElement(element);
+        inputPhoneNumber.sendKeys(password);
+    }
+
+    public void clickFacebookLoginButton() {
+        By element = By.xpath("//input[@value='Log In']");
+        WebElement btnLogin = WebDriverInstance.webDriver
+                .findElement(element);
+        btnLogin.click();
+    }
+
+    public void switchToParentWindow() {
+        WebDriverInstance.webDriver.switchTo().window(parentWindow);
     }
 }

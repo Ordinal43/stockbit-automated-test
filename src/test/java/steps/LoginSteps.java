@@ -42,7 +42,7 @@ public class LoginSteps {
 
     @When("User click login button")
     public void userClickLoginButton() {
-        loginPage.clickButtonLogin();
+        loginPage.clickLoginButton();
     }
 
     @Then("User is on Stockbit dashboard page")
@@ -70,5 +70,35 @@ public class LoginSteps {
     public void loginButtonIsStillVisible() {
         boolean isDisplayed = loginPage.isBtnLoginDisplayed();
         Assert.assertTrue(isDisplayed);
+    }
+
+    @When("User click login with Facebook button")
+    public void userClickLoginWithFacebookButton() {
+        loginPage.clickLoginWithFacebookButton();
+    }
+
+    @When("User changes to other window")
+    public void userChangesToOtherWindow() {
+        loginPage.switchToNewlyOpenedWindow();
+    }
+
+    @When("User input facebook email {string}")
+    public void userInputFacebookEmail(String email) {
+        loginPage.inputFacebookEmail(email);
+    }
+
+    @When("User input facebook password {string}")
+    public void userInputFacebookPassword(String password) {
+        loginPage.inputFacebookPassword(password);
+    }
+
+    @When("User click facebook login button")
+    public void userClickFacebookLoginButton() {
+        loginPage.clickFacebookLoginButton();
+    }
+
+    @When("User changes back to parent window")
+    public void userChangesBackToParentWindow() {
+        loginPage.switchToParentWindow();
     }
 }
