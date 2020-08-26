@@ -65,7 +65,7 @@ Feature: Login
     Then Login button is still visible
 
   @Positive @Facebook
-  Scenario: Login with registered user and correct password
+  Scenario: Login with Facebook account
     Given User is on Stockbit home screen
     When User click login menu button
     When User wait for 3 seconds
