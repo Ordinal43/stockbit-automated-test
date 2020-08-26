@@ -1,6 +1,6 @@
 @Web @Login @Regression
 
-Feature: Login
+Feature: Stockbit.com Login
 
   @Positive @RegisteredUser @CorrectPassword
   Scenario: Login with registered user and correct password
