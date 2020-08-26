@@ -31,3 +31,32 @@ Feature: Login
     When User input password "password"
     When User click login button
     Then User gets error with the message "Username atau password salah. Mohon coba lagi."
+
+  @Negative @BlankUsername @BlankPassword
+  Scenario: Login with blank username and filled password
+    Given User is on Stockbit home screen
+    When User click login menu button
+    When User wait for 3 seconds
+    When User click login button
+    Then User gets warning on username field with the message "Please fill out this field."
+    Then Login button is still visible
+
+  @Negative @BlankUsername @FilledPassword
+  Scenario: Login with blank username and filled password
+    Given User is on Stockbit home screen
+    When User click login menu button
+    When User wait for 3 seconds
+    When User input password "password"
+    When User click login button
+    Then User gets warning on username field with the message "Please fill out this field."
+    Then Login button is still visible
+
+  @Negative @FilledUsername @BlankPassword
+  Scenario: Login with filled username and blank password
+    Given User is on Stockbit home screen
+    When User click login menu button
+    When User wait for 3 seconds
+    When User input username "bryanr26"
+    When User click login button
+    Then User gets warning on password field with the message "Please fill out this field."
+    Then Login button is still visible
