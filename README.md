@@ -14,7 +14,9 @@
 
 ## Running the automation ▶️
 - Right click on CucumberRunner file and choose Run
+&nbsp;
 ![Run initial CucumberRunner Screenshot](https://i.ibb.co/y6H49V8/image.png)
 
 - After this you can run the automation program by clicking the 'play' button on the top right corner
+&nbsp;
 ![Run CucumberRunner using player Screenshot](https://i.ibb.co/MMG2dyT/image.png)
