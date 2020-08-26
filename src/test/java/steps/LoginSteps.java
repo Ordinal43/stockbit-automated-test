@@ -101,4 +101,24 @@ public class LoginSteps {
     public void userChangesBackToParentWindow() {
         loginPage.switchToParentWindow();
     }
+
+    @When("User click login with Google button")
+    public void userClickLoginWithGoogleButton() {
+        loginPage.clickLoginWithGoogleButton();
+    }
+
+    @When("User input Google email {string}")
+    public void userInputGoogleEmail(String email) {
+        loginPage.inputGoogleEmail(email);
+    }
+
+    @When("User input Google password {string}")
+    public void userInputGooglePassword(String password) {
+        loginPage.inputGooglePassword(password);
+    }
+
+    @When("User click Google next button")
+    public void userClickGoogleNextButton() {
+        loginPage.clickGoogleNextButton();
+    }
 }

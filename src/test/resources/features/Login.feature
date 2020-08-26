@@ -77,3 +77,19 @@ Feature: Login
     When User wait for 5 seconds
     When User changes back to parent window
     Then User is on Stockbit dashboard page
+
+  @Positive @Google
+  Scenario: Login with Google Account
+    Given User is on Stockbit home screen
+    When User click login menu button
+    When User wait for 5 seconds
+    When User click login with Google button
+    When User changes to other window
+    When User input Google email "lucas.hemms4444@gmail.com"
+    When User click Google next button
+    When User wait for 2 seconds
+    When User input Google password "stockbit123"
+    When User click Google next button
+    When User wait for 5 seconds
+    When User changes back to parent window
+    Then User is on Stockbit dashboard page

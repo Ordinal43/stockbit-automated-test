@@ -100,6 +100,27 @@ public class LoginPage {
         btnLogin.click();
     }
 
+    public void inputGoogleEmail(String email) {
+        By element = By.xpath("//input[@id='identifierId']");
+        WebElement inputPhoneNumber = WebDriverInstance.webDriver
+                .findElement(element);
+        inputPhoneNumber.sendKeys(email);
+    }
+
+    public void clickGoogleNextButton() {
+        By element = By.xpath("//span[text()='Next' or text()='Berikutnya']//parent::button");
+        WebElement btnLogin = WebDriverInstance.webDriver
+                .findElement(element);
+        btnLogin.click();
+    }
+
+    public void inputGooglePassword(String password) {
+        By element = By.xpath("//input[@type='password']");
+        WebElement inputPhoneNumber = WebDriverInstance.webDriver
+                .findElement(element);
+        inputPhoneNumber.sendKeys(password);
+    }
+
     public void switchToParentWindow() {
         WebDriverInstance.webDriver.switchTo().window(parentWindow);
     }
