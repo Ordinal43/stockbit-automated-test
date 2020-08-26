@@ -21,3 +21,7 @@
 - After this you can run the automation program by clicking the 'play' button on the top right corner
 &nbsp;
 ![Run CucumberRunner using player Screenshot](https://i.ibb.co/MMG2dyT/image.png)
+
+## Notes ⚠️
+- When changing ChromeDriver versions, make sure it is the same version as the current Google Chrome version you have.
+- Make sure to delete the '.exe' extension from the ChromeDriver file name in order for the automation to run.
