@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class HomePage {
     public boolean isOnPage() {
-        WebDriverWait wait = new WebDriverWait(WebDriverInstance.webDriver, 10);
+        WebDriverWait wait = new WebDriverWait(WebDriverInstance.webDriver, 5);
         By selector = By.xpath("//h1[contains(@class, 'home-title')]");
         return wait
                 .until(ExpectedConditions.presenceOfElementLocated(selector))
