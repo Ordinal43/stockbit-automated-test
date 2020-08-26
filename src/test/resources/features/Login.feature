@@ -10,6 +10,7 @@ Feature: Login
     When User input username "bryanr26"
     When User input password "password123"
     When User click login button
+    When User wait for 2 seconds
     Then User is on Stockbit dashboard page
 
   @Negative @RegisteredUser @WrongPassword
@@ -20,6 +21,7 @@ Feature: Login
     When User input username "bryanr26"
     When User input password "wrongpassword"
     When User click login button
+    When User wait for 2 seconds
     Then User gets error with the message "Username atau password salah. Mohon coba lagi."
 
   @Negative @UnregisteredUser
@@ -30,6 +32,7 @@ Feature: Login
     When User input username "wronguser"
     When User input password "password"
     When User click login button
+    When User wait for 2 seconds
     Then User gets error with the message "Username atau password salah. Mohon coba lagi."
 
   @Negative @BlankUsername @BlankPassword
