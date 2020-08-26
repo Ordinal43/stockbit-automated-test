@@ -2,7 +2,8 @@
 
 ## Requirements 🧑‍💻
 - Internet connection
-- Google Chrome Browser version 83 or newer
+- Google Chrome Browser version 83
+- ChromeDriver according to your OS and Chrome Version (currently ChromeDriver 83 Win32) 
 - Git (Any recent versions should work)
 - JDK version 1.8.0_161
 - IntelliJ IDEA 2019.3.3
