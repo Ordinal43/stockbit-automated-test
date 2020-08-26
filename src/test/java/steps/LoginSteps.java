@@ -55,4 +55,20 @@ public class LoginSteps {
     public void userGetsErrorWithTheMessage(String message) {
         Assert.assertEquals(message, loginPage.getMessage());
     }
+
+    @Then("User gets warning on username field with the message {string}")
+    public void userGetsWarningOnUsernameFieldWithTheMessage(String message) {
+        Assert.assertEquals(message, loginPage.getUsernameValidationMessage());
+    }
+
+    @Then("User gets warning on password field with the message {string}")
+    public void userGetsWarningOnPasswordFieldWithTheMessage(String message) {
+        Assert.assertEquals(message, loginPage.getPasswordValidationMessage());
+    }
+
+    @Then("Login button is still visible")
+    public void loginButtonIsStillVisible() {
+        boolean isDisplayed = loginPage.isBtnLoginDisplayed();
+        Assert.assertTrue(isDisplayed);
+    }
 }
